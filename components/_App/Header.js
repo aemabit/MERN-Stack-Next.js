@@ -80,8 +80,8 @@ function Header() {
           </Menu.Item>
         </Link>
 
-        <Link href="/signup" active={isActive('/signup')}>
-          <Menu.Item header>
+        <Link href="/signup" >
+          <Menu.Item header active={isActive('/signup')}>
             <Icon
               name="signup"
               size="small"
@@ -93,6 +93,6 @@ function Header() {
       </Container>
     </Menu>
   )
-}
+} 
 
 export default Header;
