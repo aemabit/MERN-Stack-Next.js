@@ -1,6 +1,6 @@
 :root {
   --bodyBg: #f0f4f8;
-  --menuBg: #334d68;
+  --menuBg: #ffffff;
   --progressBar: #54d1db;
 }
 
@@ -10,6 +10,7 @@ body {
 
 #menu {
   background: var(--menuBg);
+  color: #000000;
 }
 
 /* Overrides default styled accordion styles (too much bottom padding) */
