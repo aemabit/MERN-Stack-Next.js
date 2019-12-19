@@ -16,7 +16,7 @@ function Header() {
   }
 
   return (
-    <Menu fluid={true} id="menu">
+    <Menu  borderless stackable fluid={true} id="menu">
       <Container text>
 
         <Link href="/">
