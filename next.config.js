@@ -3,7 +3,7 @@ module.exports = {
   env: {
     MONGO_SRV: "mongodb+srv://gtMasterDB:jeywnMUg8UQ2HVq4@goldtokendb-bw48i.mongodb.net/test?retryWrites=true&w=majority",
     JWT_SECRET: "<insert-jwt-secret>",
-    CLOUDINARY_URL: "<insert-cloudinary-url>",
+    CLOUDINARY_URL: "https://api.cloudinary.com/v1_1/aemabit/image/upload",
     STRIPE_SECRET_KEY: "<insert-stripe-secret-key>"
   }
 };

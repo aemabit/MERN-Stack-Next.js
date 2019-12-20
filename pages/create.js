@@ -1,5 +1,7 @@
 import React from 'react'
 import { Form, Input, TextArea, Button, Image, Message, Header, Icon } from 'semantic-ui-react'
+import axios from 'axios'
+import baseUrl from '../utils/baseUrl'
 
 const INITIAL_PRODUCT = {
   name: "",
@@ -12,6 +14,7 @@ function CreateProduct() {
   const [product, setProduct ] = React.useState(INITIAL_PRODUCT)
   const [mediaPreview, setMediaPreview] = React.useState("")
   const [success, setSuccess] = React.useState(false)
+  const [loading, setLoading] = React.useState(false)
 
   function handleChange(e){
     const { name, value, files } = e.target
@@ -23,9 +26,27 @@ function CreateProduct() {
     }
   }
 
-  function handleSubmit(e){
+  async function handleImageUpload() {
+    const data = new FormData()
+    data.append('file', product.media)
+    data.append('upload_preset', 'gtfastcart')
+    data.append('cloud_name', 'aemabit')
+    const res = await axios.post(process.env.CLOUDINARY_URL, data)
+    const mediaUrl = res.data.url
+    return mediaUrl
+  }
+
+  async function handleSubmit(e){
     e.preventDefault()
-    console.log(product)
+    setLoading(true)
+    const mediaUrl = await handleImageUpload()
+    console.log({mediaUrl})
+    const url = `${baseUrl}/api/product`
+    const { name, price, description } = product
+    const payload = { name, price, description, mediaUrl }
+    const res = await axios.post(url, payload)
+    console.log({res})
+    setLoading(false)
     setProduct(INITIAL_PRODUCT)
     setSuccess(true)
   }
@@ -36,7 +57,7 @@ function CreateProduct() {
         <Icon name="add circle" color="green" />
         Create New Product
       </Header>
-      <Form success={success} onSubmit={handleSubmit}>
+      <Form loading={loading} success={success} onSubmit={handleSubmit}>
         <Message 
           success
           icon="check"
@@ -85,6 +106,7 @@ function CreateProduct() {
         />
         <Form.Field
           control={Button}
+          disabled={loading}
           color="blue"
           icon="pencil alternate"
           content="Submit"
