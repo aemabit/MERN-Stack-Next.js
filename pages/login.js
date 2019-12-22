@@ -81,7 +81,7 @@ function Login() {
             type="password"
           />
           <Button 
-            icon="sign-in"
+            icon="sign in"
             type="submit"
             color="orange"
             content="Login"
@@ -92,7 +92,7 @@ function Login() {
       <Message attached='bottom' info>
         New user?{}
         <Link href="/signup">
-          <a> Sign in here </a>
+          <a> Sign up here </a>
         </Link>{" "}
         instead.
       </Message>
