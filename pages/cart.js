@@ -25,7 +25,6 @@ Cart.getInitialProps = async ctx => {
   const res = await axios.get(url, payload)
   console.log(res.data)
   return { products: res.data }
-  
 }
 
 export default Cart;

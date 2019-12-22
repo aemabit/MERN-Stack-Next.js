@@ -10,7 +10,7 @@ async function connectDb() {
     // Use new database connection
     const db = await mongoose.connect(process.env.MONGO_SRV, {
         useCreateIndex: true,
-        useFindAndModify: true,
+        useFindAndModify: false,
         useNewUrlParser: true,
         useUnifiedTopology: true
     })
