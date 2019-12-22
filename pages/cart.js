@@ -12,7 +12,9 @@ function Cart({ products, user }) {
         user={user} 
         products={products}
       />
-      <CartSummary />
+      <CartSummary
+        products={products}
+      />
     </Segment>
   );
 }
