@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add now
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add axios
 
 PATH: 
   /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -38,6 +38,7 @@ npm manifest:
       "mongoose": "^5.6.7",
       "next": "^9.0.2",
       "nookies": "^2.0.8",
+      "now": "^16.7.0",
       "nprogress": "^0.2.0",
       "react": "^16.8.6",
       "react-dom": "^16.8.6",
@@ -4075,6 +4076,11 @@ Lockfile:
       prepend-http "^1.0.0"
       query-string "^4.1.0"
       sort-keys "^1.0.0"
+  
+  now@^16.7.0:
+    version "16.7.0"
+    resolved "https://registry.yarnpkg.com/now/-/now-16.7.0.tgz#4a1f1588410e7cbe9ca8d2c3fdcdc61e7116e8cc"
+    integrity sha512-YUMFYphAxcLE441/o2h55QgtXerF3M0GlQgy7ihJhPcz6OsllCqGgxaN5/XgnAJOlgKCW84HxSB8ZzCY55H4lQ==
   
   npm-bundled@^1.0.1:
     version "1.1.1"
