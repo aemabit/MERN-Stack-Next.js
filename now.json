@@ -1,6 +1,6 @@
 {
   "name": "GT FastCart",
-  "alias": "gtfastcart.now.sh",
+  "alias": "gt-fastcart.aemabit.now.sh",
   "version": 2,
   "env": {
     "MONGO_SRV": "mongodb+srv://gtMasterDB:jeywnMUg8UQ2HVq4@goldtokendb-bw48i.mongodb.net/test?retryWrites=true&w=majority",
